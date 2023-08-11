@@ -1,0 +1,15 @@
+<div class="container">
+<ul class="list-unstyled">
+  <li><%= @list.name %></li>
+  <% @list.bookmarks.each do |bookmark| %>
+      <%= bookmark.comment %>
+      <%= bookmark.movie.title %>
+      <%= bookmark.movie.overview %>
+      <%= bookmark.movie.rating %>
+      <%= link_to "Delete", bookmark_path(bookmark) , data: { turbo_method: :delete, turbo_confirm: "Delete This bookmark ?" } %>
+    <% end %>
+</ul>
+<div class="card flex-fill p-4 shadow-sm">
+  <%= render "lists/form" , list: @list, bookmark: @bookmark%>
+</div>
+</div>

@@ -1,0 +1,15 @@
+<div class="container">
+<h1>Bookmarks</h1>
+
+<ul class="list-unstyled">
+  <% @bookmarks.each do |bookmark| %>
+    <%= bookmark.comment %>
+    <%= bookmark.movie.title %>
+    <%= bookmark.movie.overview %>
+    <%= bookmark.movie.rating %>
+    <%= link_to "Delete", bookmark_path(bookmark) , data: { turbo_method: :delete, turbo_confirm: "Delete This bookmark ?" } %>
+  <% end %>
+</ul>
+
+
+</div>
