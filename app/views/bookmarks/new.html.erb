@@ -1,10 +1,9 @@
 <div class="container">
 <h1>Create Bookmarks</h1>
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie, include_blank: false %>
-  <%= f.button :submit , class: "btn btn-light"%>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.input :comment %>
+    <%= f.association :movie, include_blank: false %>
+    <%= f.button :submit , class: "btn btn-light"%>
 
-<% end %>
-
+  <% end %>
 </div>

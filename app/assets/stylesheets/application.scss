@@ -10,3 +10,10 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "components/navbar";
+
+.card-background{
+  background-color: rgb(119, 117, 117);
+  width: 8rem;
+  height: 8rem;
+}
